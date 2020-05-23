@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <header class="header">
+        <div class="search-main">
+            <img class="logo" src="img/logo.png" alt="pokemon-logo">
+            <div class="container-main">
+                <div class="water-mark">
+                    <span>Pokédex</span>
+                </div>
+                <div class="main-screen">
+                    <h1 id="welcome">¡Hola!</h1>
+                    <p id="welcome-speech">Soy Pikachu, bienvenido a la Pokédex. Te voy a estar ayudando a que encuentres a todos los Pokémon del mundo.</p>
+                    <form action="#" id="formulario">
+                        <div class="campo-buscador">
+                            <input type="text" id="buscador">
+                            <label id="search-label" class="placeholder-buscador" for="">Escribe el nombre de tu Pokémon</label>
+                            <input type="submit" class="submit-buscador">
+                        </div>
+                    </form>
+                    <img class="pikachu-buscador" src="img/pikachu.png" alt="pikachu">
+                </div>   
+            </div>
+        </div>
+        <div class="language-scroll">
+            <div class="languages-container">
+                <div class="es-container">
+                    <img class="button-es" id="es" src="img/es-pik.png" alt="es-ES">
+                    <span>ES</span>
+                </div>
+                <div class="en-container">
+                    <img class="button-en not-selected-lang" id="en" src="img/en-jig.png" alt="en-EN">
+                    <span>EN</span>
+                </div>                
+            </div>
+        </div>
+    </header>
+    <main lang='es'>
+        <div class="container self">
+                <div class="introduction">
+                    <div class="me">
+                        <span class="icon-ball"><img src="img/pokeball-icon.svg" alt="icon_pokeball"></span>
+                        <span id="intro-char" class="little-heading">Intro Personaje</span>
+                        <h2 class="header-intro">Ash Ketchum</h2>
+                        <div class="container-intro">
+                            <p id="first-intro" class="p-intro">Conocido en Japón como Satoshi, es el protagonista de la serie de anime Pokémon.</p>
+                            <p id="second-intro"class="p-intro">Mide 1.65 m y pesa 54 kg. Es un entrenador Pokémon originario de Pueblo Paleta, de la región de Kanto.</p>
+                        </div></div>
+                    <div class="side-me">
+                        <div class="ash-container">
+                            <img src="img/ash.png" alt="ash ketchup">
+                        </div>
+                    </div>
+                    <div class="container-deco">
+                        <img class="jigg" src="img/jigglepuff.png" alt="jigglepuff">
+                        <img class="mew" src="img/mew.png" alt="mew">
+                        <img class="squirtle" src="img/squirtle.png" alt="squirtle">
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+            <div id="pokemon">
+            </div>
+            <div class="modal">
+                <div class="container-modal">
+                    <ul class="pokeball-spinner">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>  
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-pokedex"><p>Pokédex</p></div>
+        <div class="footer-myself"><p class="footer-me">Hernán Matías Alonso</p><p class="footer-year">Mayo 2020</p></div>
+        <div class="footer-img"><img src="img/footer-pikachu.png" alt="pikachu-footer"></div>
+        <div class="footer-regards"><p>PokeApi.co</p></div>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

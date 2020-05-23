@@ -1,0 +1,1382 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:500");
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/Inter-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Inter-Italic";
+  src: url("../fonts/Inter-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("../fonts/Inter-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("../fonts/Inter-SemiBold.otf") format("opentype");
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Inter-Bold", Helvetica, Arial, serif;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 840px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+.header .logo {
+  width: 130px;
+  height: 48px;
+  margin: 25px 0 0 10px;
+}
+
+@media (min-width: 768px) {
+  .header .logo {
+    margin: 25px 0 0 40px;
+  }
+}
+
+.header .search-main {
+  position: relative;
+  flex: 0 0 90%;
+  background-color: #f8d41f;
+}
+
+.header .language-scroll {
+  flex: 0 0 15%;
+  background-color: #f4ecc5;
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    padding: 0 3rem;
+  }
+  .header .language-scroll {
+    flex: 0 0 33%;
+    height: 833px;
+  }
+  .header .search-main {
+    flex: 0 0 66%;
+    height: 833px;
+  }
+}
+
+@media (min-width: 945px) {
+  .header {
+    padding: 0;
+  }
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 117px;
+}
+
+.container-main .water-mark {
+  flex: 0 1 17%;
+}
+
+.container-main .water-mark span {
+  display: inline-block;
+  margin: 0 0 0 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Inter-Medium";
+  line-height: 2.15;
+  letter-spacing: 10px;
+  color: rgba(116, 116, 116, 0.41);
+}
+
+@media (min-width: 768px) {
+  .container-main .water-mark span {
+    transform: rotate(-90deg);
+    margin: 170px 20px 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-main .water-mark {
+    flex: 0 0 17%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-main {
+    flex-direction: row;
+  }
+}
+
+.container-main .main-screen {
+  padding: 0 2rem;
+  flex: 1;
+  margin: 0 auto;
+}
+
+.container-main .main-screen h1 {
+  font-family: "Inter-Bold", Helvetica, Arial, serif;
+  font-size: 70px;
+  line-height: 1.31;
+  letter-spacing: 11px;
+  color: #ffffff;
+  margin: 80px 0 0 0;
+}
+
+@media (min-width: 480px) {
+  .container-main .main-screen h1 {
+    font-size: 120px;
+    letter-spacing: 5px;
+  }
+}
+
+.container-main .main-screen p {
+  font-family: "Inter-Medium";
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  max-width: 418px;
+  max-height: 109px;
+  line-height: 1.5;
+}
+
+@media (min-width: 480px) {
+  .container-main .main-screen p {
+    font-size: 20px;
+  }
+}
+
+.container-main .main-screen .pikachu-buscador {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 15%;
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .container-main .main-screen .pikachu-buscador {
+    right: -50%;
+    top: 30%;
+    display: block;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-main .main-screen .pikachu-buscador {
+    width: 700px;
+    height: 700px;
+    right: -50%;
+    top: 15%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container-main .main-screen .pikachu-buscador {
+    right: -30%;
+    top: 10%;
+    width: 750px;
+    height: 750px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-main .main-screen {
+    flex: 0 1 83%;
+  }
+}
+
+#formulario {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+#formulario .campo-buscador {
+  display: flex;
+  position: relative;
+  margin-top: 19px;
+  max-width: 470px;
+}
+
+#formulario .campo-buscador #buscador {
+  flex: 1;
+  padding: 1.1rem 1rem .7rem 1rem;
+  border: none;
+  height: 51px;
+  border-radius: 11px;
+  font-size: 16px;
+}
+
+#formulario .campo-buscador #buscador:focus {
+  outline: none;
+}
+
+#formulario .campo-buscador #buscador:focus + label {
+  font-size: 12px;
+  top: .2rem;
+}
+
+@media (min-width: 480px) {
+  #formulario .campo-buscador #buscador {
+    font-size: 22px;
+  }
+}
+
+#formulario .campo-buscador .placeholder-buscador {
+  position: absolute;
+  top: 1.1rem;
+  left: .4rem;
+  font-size: 12px;
+  font-family: "Inter-Italic";
+  font-style: italic;
+  color: #989898;
+  transition: font-size 0.2s ease, top 0.2s ease;
+}
+
+@media (min-width: 480px) {
+  #formulario .campo-buscador .placeholder-buscador {
+    left: 1rem;
+    font-size: 15px;
+  }
+}
+
+#formulario .campo-buscador .submit-buscador {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 51px;
+  background-image: url("../img/loupe.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 52px;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+  text-indent: -99999px;
+  border: none;
+  cursor: pointer;
+  background-color: #3774b3;
+}
+
+@media (min-width: 768px) {
+  #formulario {
+    padding: 0;
+  }
+}
+
+.not-selected-lang {
+  opacity: .59;
+}
+
+.languages-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 31px 43px 0 0;
+}
+
+.languages-container .es-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.languages-container .es-container .button-es {
+  width: 64px;
+  flex: 1;
+  height: 52px;
+}
+
+.languages-container .es-container .button-es:hover {
+  cursor: pointer;
+}
+
+.languages-container .es-container span {
+  margin-top: 3px;
+  font-size: 13.5px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  letter-spacing: 1.35px;
+  color: rgba(102, 102, 102, 0.77);
+  flex: 1;
+  display: block;
+}
+
+.languages-container .en-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.languages-container .en-container .button-en {
+  width: 55px;
+  height: 50px;
+  flex: 1;
+}
+
+.languages-container .en-container .button-en:hover {
+  cursor: pointer;
+}
+
+.languages-container .en-container span {
+  margin-top: 3px;
+  font-size: 13.5px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  letter-spacing: 1.35px;
+  color: rgba(102, 102, 102, 0.77);
+  flex: 1;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .languages-container {
+    justify-content: flex-end;
+  }
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main h2 {
+  text-align: center;
+  letter-spacing: 1.2px;
+  line-height: 1.7;
+}
+
+.self {
+  height: 963px;
+  background: linear-gradient(to bottom, #ffffff, #f5f4f4 73%);
+  padding: 235px 2rem 0 2rem;
+}
+
+.self .introduction {
+  position: relative;
+  display: flex;
+  width: 80%;
+  height: 500px;
+  border-radius: 11px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.11);
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+@media (min-width: 945px) {
+  .self .introduction {
+    width: 890px;
+  }
+}
+
+.self .introduction .me {
+  flex: 1;
+  height: 500px;
+  padding: 0 2rem;
+}
+
+@media (min-width: 945px) {
+  .self .introduction .me {
+    padding: 0;
+  }
+}
+
+.self .introduction .me .icon-ball {
+  display: inline-block;
+  width: 100%;
+  margin: 32px 0 0 0;
+}
+
+@media (min-width: 945px) {
+  .self .introduction .me .icon-ball {
+    margin: 32px 0 0 48px;
+  }
+}
+
+.self .introduction .me .little-heading {
+  display: inline-block;
+  color: #403f3f;
+  margin: 13px 0 0 0;
+  font-family: "Inter-Regular";
+  font-size: 14px;
+}
+
+@media (min-width: 480px) {
+  .self .introduction .me .little-heading {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 945px) {
+  .self .introduction .me .little-heading {
+    margin: 13px 0 0 48px;
+  }
+}
+
+.self .introduction .me .header-intro {
+  color: #403f3f;
+  text-align: center;
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: "Inter-Bold", Helvetica, Arial, serif;
+  font-weight: 600;
+}
+
+@media (min-width: 480px) {
+  .self .introduction .me .header-intro {
+    font-size: 1.87rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .self .introduction .me .header-intro {
+    font-size: 2.56rem;
+  }
+}
+
+@media (min-width: 945px) {
+  .self .introduction .me .header-intro {
+    text-align: left;
+    margin: 0 0 0 48px;
+  }
+}
+
+.self .introduction .me .container-intro {
+  width: 100%;
+  margin: 25px auto;
+  padding: 0 1rem;
+  font-size: 12px;
+}
+
+@media (min-width: 480px) {
+  .self .introduction .me .container-intro {
+    font-size: 0.87rem;
+    max-width: 314px;
+  }
+}
+
+@media (min-width: 768px) {
+  .self .introduction .me .container-intro {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+
+@media (min-width: 945px) {
+  .self .introduction .me .container-intro {
+    margin: 60px 11px 18px 48px;
+  }
+}
+
+.self .introduction .me .container-intro .p-intro {
+  color: #403f3f;
+  font-family: "Inter-Regular";
+}
+
+.self .introduction .side-me {
+  display: none;
+  flex: 1;
+  height: 500px;
+  background-color: #9ddae6;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+  position: relative;
+}
+
+@media (min-width: 945px) {
+  .self .introduction .side-me {
+    display: block;
+  }
+}
+
+.self .introduction .side-me .ash-container {
+  position: absolute;
+  width: 512px;
+  height: 557px;
+  bottom: 2.4%;
+  right: 0;
+}
+
+.self .introduction .container-deco {
+  position: absolute;
+  width: 100%;
+  height: 598px;
+}
+
+.self .introduction .container-deco .jigg {
+  width: 170px;
+  height: 165px;
+  position: absolute;
+  bottom: 105%;
+  left: 20%;
+}
+
+.self .introduction .container-deco .squirtle {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  bottom: 4%;
+  left: -23%;
+}
+
+@media (min-width: 480px) {
+  .self .introduction .container-deco .squirtle {
+    width: 207px;
+    height: 213px;
+    left: -18%;
+  }
+}
+
+@media (min-width: 768px) {
+  .self .introduction .container-deco .squirtle {
+    left: -10%;
+  }
+}
+
+@media (min-width: 945px) {
+  .self .introduction .container-deco .squirtle {
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .self .introduction .container-deco .squirtle {
+    left: -10%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .self .introduction .container-deco .squirtle {
+    left: -18%;
+  }
+}
+
+.self .introduction .container-deco .mew {
+  width: 170px;
+  height: 180px;
+  position: absolute;
+  right: -25%;
+  bottom: 16%;
+}
+
+@media (min-width: 480px) {
+  .self .introduction .container-deco .mew {
+    width: 201px;
+    height: 231px;
+    right: -20%;
+    bottom: 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .self .introduction .container-deco .mew {
+    bottom: 10%;
+    right: -8%;
+  }
+}
+
+@media (min-width: 945px) {
+  .self .introduction .container-deco .mew {
+    right: -3%;
+    bottom: 4%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .self .introduction .container-deco .mew {
+    right: -23%;
+    bottom: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .self {
+    padding: 235px 2rem 0 2rem;
+  }
+}
+
+#pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 140px auto 280px auto;
+  max-width: 1440px;
+}
+
+#pokemon .contenedor-pokemon {
+  flex: 0 0 80%;
+  margin: 40px auto;
+  cursor: pointer;
+  text-transform: capitalize;
+  max-width: 345px;
+  height: 500px;
+  border-radius: 11px;
+}
+
+@media (min-width: 768px) {
+  #pokemon .contenedor-pokemon {
+    flex: 0 1 calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  #pokemon .contenedor-pokemon {
+    flex: 0 0 100%;
+    margin: 40px;
+  }
+}
+
+.flip-card-back {
+  border-radius: 11px;
+  background-color: #ffffff;
+  padding: .2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.flip-card-back .wrapper-datos {
+  padding: 0;
+  width: 100%;
+  height: 50%;
+  margin-top: -33px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.flip-card-back .wrapper-datos .habilidad-container {
+  padding-top: 29%;
+  background-color: #ffffff;
+  border-radius: 11px;
+}
+
+.flip-card-back .wrapper-datos h3 {
+  padding: 0;
+  margin: 0;
+  max-height: 22px;
+}
+
+.flip-card-back .contenedor-img-pokemon {
+  flex: 1;
+  position: absolute;
+  left: 6%;
+  top: -2%;
+}
+
+.flip-card-back .contenedor-img-pokemon img {
+  margin: 0;
+  padding: 0;
+  width: 270px;
+  height: 257px;
+}
+
+@media (min-width: 480px) {
+  .flip-card-back .contenedor-img-pokemon {
+    left: 10%;
+  }
+}
+
+.flip-card-back .flip-back {
+  display: inline-block;
+  text-align: right;
+  font-size: 1.7rem;
+  width: 100%;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  height: 27%;
+  color: #ffffff;
+  background-color: #fc6b6f;
+}
+
+.flip-card-back .flip-back.grass, .flip-card-back .flip-back.bug {
+  background-color: #8edfba;
+}
+
+.flip-card-back .flip-back.fire {
+  background-color: #fb8387;
+}
+
+.flip-card-back .flip-back.water, .flip-card-back .flip-back.ice {
+  background-color: #7798fc;
+}
+
+.flip-card-back .flip-back.poison {
+  background-color: #a599f4;
+}
+
+.flip-card-back .flip-back.electric, .flip-card-back .flip-back.steel {
+  background-color: #fbe187;
+}
+
+.flip-card-back .flip-back.ground, .flip-card-back .flip-back.fighter {
+  background-color: #A36736;
+}
+
+.flip-card-back .flip-back.fairy {
+  background-color: #ffb3d2;
+}
+
+.flip-card-back .flip-back.flying {
+  background-color: #abcbd2;
+}
+
+.flip-card-back .pokemon-data {
+  font-size: .8rem;
+  display: block;
+}
+
+.flip-card-back span {
+  display: inline-block;
+  margin: 0 .2rem;
+  padding: .4rem .1rem;
+  letter-spacing: 1.2px;
+}
+
+.flip-card-back h3 {
+  width: 100%;
+}
+
+.flip-card-back .detalles-hab {
+  width: 90%;
+  padding: .1rem;
+  margin: 0 .5rem;
+  text-align: left;
+}
+
+.flip-card-back .detalles-hab span:first-of-type {
+  font-size: 15px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  color: #fc6b6f;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.grass, .flip-card-back .detalles-hab span:first-of-type.bug {
+  color: #8edfba;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.fire {
+  color: #fb8387;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.water, .flip-card-back .detalles-hab span:first-of-type.ice {
+  color: #7798fc;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.poison {
+  color: #a599f4;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.electric, .flip-card-back .detalles-hab span:first-of-type.steel {
+  color: #fbe187;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.ground, .flip-card-back .detalles-hab span:first-of-type.fighter {
+  color: #A36736;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.fairy {
+  color: #ffb3d2;
+}
+
+.flip-card-back .detalles-hab span:first-of-type.flying {
+  color: #abcbd2;
+}
+
+.flip-card-back .detalles-hab .desc {
+  text-transform: none;
+  padding: 0 .1rem;
+  font-size: 14px;
+  line-height: 1.71;
+  margin: 3px 2px 2px 7px;
+  font-family: "Inter-Medium";
+  color: #4f4d4d;
+  display: inline-block;
+}
+
+.caracteristicas-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.caracteristicas-container .sm-heading-hab {
+  width: 100%;
+  font-size: 15px;
+  padding: 0;
+  margin: 0 0 10px 0;
+  color: #fc6b6f;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+}
+
+.caracteristicas-container .sm-heading-hab.grass, .caracteristicas-container .sm-heading-hab.bug {
+  color: #8edfba;
+}
+
+.caracteristicas-container .sm-heading-hab.fire {
+  color: #fb8387;
+}
+
+.caracteristicas-container .sm-heading-hab.water, .caracteristicas-container .sm-heading-hab.ice {
+  color: #7798fc;
+}
+
+.caracteristicas-container .sm-heading-hab.poison {
+  color: #a599f4;
+}
+
+.caracteristicas-container .sm-heading-hab.electric, .caracteristicas-container .sm-heading-hab.steel {
+  color: #fbe187;
+}
+
+.caracteristicas-container .sm-heading-hab.ground, .caracteristicas-container .sm-heading-hab.fighter {
+  color: #A36736;
+}
+
+.caracteristicas-container .sm-heading-hab.fairy {
+  color: #ffb3d2;
+}
+
+.caracteristicas-container .sm-heading-hab.flying {
+  color: #abcbd2;
+}
+
+.caracteristicas-container .ct-habs {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.caracteristicas-container .ct-habs .pokemon-data-hab {
+  display: inline-block;
+  border: 1.1px solid #cccccc;
+  border-radius: 50px;
+  padding: .5rem;
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  font-weight: 500;
+  color: #4f4d4d;
+  background-color: #ffffff;
+}
+
+.caracteristicas-container .ct-habs .active {
+  background-color: #fc6b6f;
+  color: #ffffff;
+}
+
+.heading-card-front {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.7rem;
+}
+
+.heading-card-front .poke-card-head {
+  width: 46px;
+  height: 44px;
+  margin-left: 30px;
+}
+
+.heading-card-front h3 {
+  font-size: 30px;
+  font-family: "Inter-Bold", Helvetica, Arial, serif;
+  color: #666666;
+  text-align: left;
+  width: 60%;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.flipped {
+  box-shadow: none;
+  transition: all .3s ease;
+  transform: rotateY(180deg);
+}
+
+.backFlip {
+  transform: rotateY(0deg);
+}
+
+.container {
+  position: relative;
+}
+
+.container #mas {
+  width: 90%;
+  height: 69px;
+  border-radius: 40.7px;
+  box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.1);
+  border: 1.1px solid #dedede;
+  background-color: #ffffff;
+  position: absolute;
+  left: 5%;
+  z-index: 1;
+  text-align: center;
+  cursor: pointer;
+  /**      Hacer cambios ACA */
+  bottom: -60px;
+  padding: 20px 0 0 0;
+}
+
+@media (min-width: 480px) {
+  .container #mas {
+    width: 294px;
+    left: calc(26% - 2rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .container #mas {
+    left: calc(36% - 2rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .container #mas {
+    left: calc(40% - 2rem);
+  }
+}
+
+@media (min-width: 1700px) {
+  .container #mas {
+    left: calc(43% - 2rem);
+  }
+}
+
+.container #mas span {
+  font-size: 22px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  color: #454545;
+}
+
+.flip-card {
+  border-radius: 0.6rem;
+  background-color: transparent;
+  width: 300px;
+  height: 325px;
+  perspective: 1000px;
+}
+
+.flip-card .flip-card-inner {
+  border-radius: 0.6rem;
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+.flip-card .flip-card-inner .flip-card-front, .flip-card .flip-card-inner .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card .flip-card-inner .flip-card-back {
+  color: #e7e4d5;
+  transform: rotateY(180deg);
+}
+
+.flip-card-front {
+  border-radius: 0.6rem;
+  background-color: #fc6b6f;
+}
+
+.flip-card-front .contenedor-imagen {
+  margin: 49px auto 17px auto;
+}
+
+.flip-card-front .contenedor-imagen img {
+  width: 192px;
+  height: 192px;
+}
+
+.flip-card-front h2 {
+  font-size: 35px;
+  color: #ffffff;
+  letter-spacing: 3.89px;
+  font-family: "Inter-Bold", Helvetica, Arial, serif;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+.flip-card-front .contenedor-datos span {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  margin: 0 0 55px 0;
+}
+
+.flip-card-front button {
+  cursor: pointer;
+  width: 201px;
+  height: 63px;
+  border-radius: 37px;
+  box-shadow: 0 2px 21px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  margin: 70px auto;
+}
+
+.flip-card-front button span {
+  color: #fc6b6f;
+  font-family: "Inter-Regular";
+  font-size: 20px;
+}
+
+.flip-card-front button:focus {
+  outline: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal .container-modal {
+  height: 200px;
+  width: 200px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal .container-modal .pokeball-spinner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  transform-style: preserve-3d;
+  animation: rotate 2s ease infinite;
+}
+
+.modal .container-modal .pokeball-spinner li {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+  background-image: linear-gradient(to bottom, red 45%, black 45%, black 55%, white 1%);
+  z-index: -2;
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(1) {
+  transform: rotateY(10deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(2) {
+  transform: rotateY(20deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(3) {
+  transform: rotateY(30deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(4) {
+  transform: rotateY(40deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(5) {
+  transform: rotateY(50deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(6) {
+  transform: rotateY(60deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(7) {
+  transform: rotateY(70deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(8) {
+  transform: rotateY(80deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(9) {
+  transform: rotateY(90deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(10) {
+  transform: rotateY(100deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(11) {
+  transform: rotateY(110deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(12) {
+  transform: rotateY(120deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(13) {
+  transform: rotateY(130deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(14) {
+  transform: rotateY(140deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(15) {
+  transform: rotateY(150deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(16) {
+  transform: rotateY(160deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(17) {
+  transform: rotateY(170deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(18) {
+  transform: rotateY(180deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(19) {
+  transform: rotateY(190deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(20) {
+  transform: rotateY(200deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(21) {
+  transform: rotateY(210deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(22) {
+  transform: rotateY(220deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(23) {
+  transform: rotateY(230deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(24) {
+  transform: rotateY(240deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(25) {
+  transform: rotateY(250deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(26) {
+  transform: rotateY(260deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(27) {
+  transform: rotateY(270deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(28) {
+  transform: rotateY(280deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(29) {
+  transform: rotateY(290deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(30) {
+  transform: rotateY(300deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(31) {
+  transform: rotateY(310deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(32) {
+  transform: rotateY(320deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(33) {
+  transform: rotateY(330deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(34) {
+  transform: rotateY(340deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(35) {
+  transform: rotateY(350deg);
+}
+
+.modal .container-modal .pokeball-spinner li:nth-child(36) {
+  transform: rotateY(360deg);
+}
+
+.modal .container-modal .pokeball-spinner::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  z-index: 50;
+  transform: translateZ(110px) translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px black, 0 0 4px black, 0 0 5px black, 0 0 1px white, 0 0 2px white, 0 0 3px white;
+}
+
+.modal .container-modal .pokeball-spinner::before {
+  position: absolute;
+  content: "";
+  height: 60px;
+  width: 60px;
+  z-index: 50;
+  transform: translateZ(102px) translateY(-50%) translateX(-50%);
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 0 1px black, 0 0 2px black, 0 0 3px black, 0 0 4px black, 0 0 5px black, 0 0 1px white, 0 0 2px white, 0 0 3px white;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  margin-top: 400px;
+  border-top: 1px solid #f2f2f2;
+  background: linear-gradient(to bottom, #ffffff, #f5f4f4 73%);
+  display: flex;
+  flex-direction: row;
+  padding-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  color: #a39c9c;
+  font-size: 14px;
+  font-family: "Inter-Medium";
+  font-weight: 500;
+  line-height: 1.72;
+  text-align: center;
+}
+
+.footer .footer-pokedex {
+  flex: 1;
+}
+
+.footer .footer-pokedex p {
+  padding-bottom: 35px;
+}
+
+.footer .footer-myself {
+  flex: 1;
+}
+
+.footer .footer-myself p {
+  margin: 0;
+}
+
+.footer .footer-regards {
+  flex: 1;
+}
+
+.footer .footer-regards p {
+  padding-bottom: 35px;
+}
+
+.footer .footer-img {
+  position: absolute;
+  left: 18%;
+  bottom: 86%;
+  max-height: 148px;
+}
+
+@media (min-width: 480px) {
+  .footer .footer-img {
+    left: 25%;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer .footer-img {
+    left: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer .footer-img {
+    left: 40%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .footer .footer-img {
+    left: 43%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    font-size: 18px;
+  }
+}
