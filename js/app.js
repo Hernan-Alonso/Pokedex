@@ -2,6 +2,9 @@
 /**
  * Variables para el manejo del DOM y otras utilidades
  * @const divPokemon Div donde se van a mostrar los pokémons
+ * @const formulario form del search
+ * @const submitBtn boton de lupa
+ * @const chipSearch div que se genera al buscar un Pokemon
  * @const mostrarMas Botón para listar la siguiente página de pokémons
  * @const spanMas Texto al inicio del DOM, se cambia segun idioma
  * @const main Main del sitio para generar un @data
