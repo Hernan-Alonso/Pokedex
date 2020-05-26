@@ -20,6 +20,9 @@
  */
 const divPokemon = document.querySelector('#pokemon');
 const formulario = document.querySelector('#formulario');
+const input = document.querySelector('#buscador');
+const submitBtn = document.querySelector('input[type="submit"]');
+const chipSearch = document.querySelector('#chipSearch');
 const mostrarMas = document.createElement('div'); 
       mostrarMas.id = 'mas';  
       mostrarMas.classList.add('contenedor-boton');  
@@ -90,6 +93,8 @@ function eventListener(){
     btnEs.addEventListener('click',cambiarIdioma);
     btnEn.addEventListener('click', cambiarIdioma);
     formulario.addEventListener('submit', buscarPokemon);
+    input.addEventListener('blur',contenidoInput);
+    chipSearch.querySelector('span').addEventListener('click', limpiarBusqueda);
 }
 
 
@@ -117,28 +122,50 @@ function mostrarMasPokemons(){
  * 
  * @param {Action} e 
  * Recibe @String del Pokémon a buscar.
+ * Si el campo esta vacio, devuelve mensaje de error para completar el campo
+ * Si el Pokemon no existe devuelve error de que no existe, solo puede buscar por Nombre, no ID
  */
-//TODO: Feedback al no poner nada, y al poner cualquier value
 function buscarPokemon(e){
     e.preventDefault();
-    let input = document.querySelector('#buscador');
     let pokemon = input.value;
-        pokemon = pokemon.toLowerCase();
-    if(pokemon !== ''){
-        api.obtenerDetallePokemon(pokemon)
+    let pokemonSearch = pokemon.toLowerCase();
+        submitBtn.disabled = true;    
+    if(pokemonSearch !== '' && isNaN(pokemonSearch)){
+        api.obtenerDetallePokemon(pokemonSearch)
             .then(data=>{
-                divPokemon.scrollIntoView();
-                divPokemon.innerHTML = '';
-                divPokemon.appendChild(mostrarMas);
-                mostrarMas.classList.add('contenedor-boton');
-                mostrarMas.appendChild(spanMas);
-                ui.traerPokemon(data);
-            },data =>{
-                console.log(data);
-                console.log('hubo un error');
+                if(data.type === 'error'){
+                    let mensaje;
+                    if(main.getAttribute('lang') === 'es'){
+                        mensaje = 'El Pokémon no existe en el Pokedex';
+                    }else{
+                        mensaje = 'The Pokémon is not in the Pokedex';
+                    }
+                    ui.mostrarMensaje(mensaje);
+                }else{
+                    divPokemon.scrollIntoView();
+                    divPokemon.innerHTML = '';
+                    divPokemon.appendChild(mostrarMas);
+                    mostrarMas.classList.add('contenedor-boton');
+                    mostrarMas.appendChild(spanMas);
+                    ui.traerPokemon(data);
+                    divPokemon.classList.add('hasChip');
+                    chipSearch.classList.remove('hide');
+                    chipSearch.classList.add('show');
+                    chipSearch.querySelector('span').innerHTML = pokemon+`<b>&times;</b>`;
+                    mostrarMas.classList.add('hide');
+                    formulario.reset();
+                    input.blur();
+                    submitBtn.disabled = false;
+                }
             });
     }else{
-        console.log('Ingresa un Nombre de Pokemon');
+        let mensaje;
+        if(main.getAttribute('lang') === 'es'){
+            mensaje = 'Ingresa un nombre de Pokémon';
+        }else{
+            mensaje = 'You must enter a Pokémon name';
+        }
+        ui.mostrarMensaje(mensaje);
     }
     
 }
@@ -161,4 +188,30 @@ function cambiarIdioma(){
     mostrarMas.appendChild(spanMas);
     offset = 0;
     buscarPokemons();
+}
+
+/**
+ * @function contenidoInput
+ * Siempre que haya texto en el input se mantendra como Focused.
+ */
+function contenidoInput(){
+    if(input.value !== ''){
+        input.focus({preventScroll: true});
+    }
+}
+
+/**
+ * @function limpiarBusqueda
+ * remueve el Chip de busqueda y limpia el registro, trae nuevamente todos los pokemons de la pirmera pagina.
+ */
+function limpiarBusqueda(){
+    chipSearch.classList.remove('show');
+    chipSearch.classList.add('hide');
+    mostrarMas.classList.remove('hide');
+    divPokemon.classList.remove('hasChip');
+    divPokemon.innerHTML = '';
+    offset = 0;
+    buscarPokemons();
+    divPokemon.appendChild(mostrarMas);
+    mostrarMas.appendChild(spanMas);
 }

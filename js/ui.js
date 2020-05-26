@@ -299,4 +299,21 @@ class Ui{
         spinner.style.display = vista;
     }
 
+    /**
+     * 
+     * @param {String} mensaje 
+     * Muestra el mensaje de error correspondiente.
+     */
+    mostrarMensaje(mensaje){
+        let divMensaje = document.createElement('div');
+            divMensaje.classList.add('error');
+            divMensaje.innerHTML = mensaje;
+        formulario.appendChild(divMensaje);
+        setTimeout(()=>{
+            formulario.reset();
+            formulario.removeChild(divMensaje);
+            submitBtn.disabled = false;
+        },3000); 
+    }
+
 }

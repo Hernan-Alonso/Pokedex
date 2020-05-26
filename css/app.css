@@ -293,6 +293,46 @@ body {
   }
 }
 
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+  width: 81.5%;
+  max-height: 22px;
+  padding: .4rem 1rem;
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  font-size: 10px;
+  line-height: 1;
+  max-width: 420px;
+}
+
+@media (min-width: 480px) {
+  .error {
+    width: 87%;
+    letter-spacing: 1.4px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .error {
+    width: 74.5%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .error {
+    width: 60.7%;
+  }
+}
+
+@media (min-width: 1700px) {
+  .error {
+    width: 33.3%;
+  }
+}
+
 .not-selected-lang {
   opacity: .59;
 }
@@ -623,6 +663,34 @@ main h2 {
   .self {
     padding: 235px 2rem 0 2rem;
   }
+}
+
+.valueSearch {
+  text-align: center;
+  margin: 140px auto 0 auto;
+  padding: 4rem 0 0 0;
+}
+
+.valueSearch span {
+  cursor: pointer;
+  display: inline-block;
+  border: 1.1px solid #cccccc;
+  border-radius: 50px;
+  padding: .5rem 1.2rem;
+  font-family: "Inter-Medium";
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.2;
+  background-color: #fc6b6f;
+}
+
+.valueSearch span b {
+  margin-left: 10px;
+}
+
+.hasChip {
+  margin: 10px auto 280px auto !important;
 }
 
 #pokemon {

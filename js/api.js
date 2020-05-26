@@ -28,7 +28,13 @@ class Api{
         const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
 
         const urlDataPokemon = await fetch(url);
-
+        if(urlDataPokemon.status === 404){
+            let obError = {
+                type: 'error',
+                message: 'No Pokemon found'
+            }
+            return obError;
+        }
         const pokemon = await urlDataPokemon.json();
 
         return{pokemon}
